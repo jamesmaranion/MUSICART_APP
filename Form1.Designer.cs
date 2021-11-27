@@ -58,6 +58,7 @@ namespace MUSICART_APP
             this.label10 = new System.Windows.Forms.Label();
             this.txtSearchAlbumm = new System.Windows.Forms.TextBox();
             this.btnSearchAlbum2 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -309,11 +310,22 @@ namespace MUSICART_APP
             this.btnSearchAlbum2.UseVisualStyleBackColor = true;
             this.btnSearchAlbum2.Click += new System.EventHandler(this.btnSearchAlbum2_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(55, 321);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 35;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // SongView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSearchAlbum2);
             this.Controls.Add(this.txtSearchAlbumm);
             this.Controls.Add(this.label10);
@@ -386,6 +398,7 @@ namespace MUSICART_APP
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtSearchAlbumm;
         private System.Windows.Forms.Button btnSearchAlbum2;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

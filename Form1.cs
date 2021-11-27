@@ -12,11 +12,11 @@ namespace MUSICART_APP
 {
     public partial class SongView : Form
     {
-        MusicArtEntities12 db;
+        MusicArtEntities13 db;
         public SongView()
         {
             InitializeComponent();
-            db = new MusicArtEntities12 ();
+            db = new MusicArtEntities13 ();
             dataGridView1.DataSource = db.SongViews.ToList();
            
         }
@@ -36,7 +36,7 @@ namespace MUSICART_APP
                 dataGridView1.DataSource = db.uspGetSongs().ToList();
             }
            
-            
+        
         }
 
         private void btnSearchSong_Click(object sender, EventArgs e)
@@ -94,6 +94,15 @@ namespace MUSICART_APP
         private void btnSearchAlbum2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = db.uspGetAlbumName(txtSearchAlbumm.Text).ToList();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            var alb = db.uspUpdateAlbum(txtAlbumID.Text, txtAlbumTitle.Text);
+            if(alb != null)
+            {
+                dataGridView1.DataSource = db.uspGetAlbum().ToList();
+            }
         }
     }
 }
